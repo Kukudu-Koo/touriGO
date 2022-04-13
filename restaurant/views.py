@@ -1,0 +1,27 @@
+from django.shortcuts import render,redirect
+from .models import hotels
+# Create your views here.
+
+hotel1=hotels()
+hotel2=hotels()
+def submitform(request):
+    if request.method=='POST':
+        hotel1.name=request.POST['Name']
+        hotel1.img=request.FILES['img']
+        hotel1.desc=request.POST['desc']
+        hotel1.price=request.POST['price']
+        offer=request.POST.get('offer_yes')
+        if offer=='on':
+            offer=True
+        else:
+            offer=False
+        hotel1.offer=offer
+
+        hotel1.save()
+        return redirect('/')
+    else:
+        return render(request,'Restaurant_provider_Form.html')
+# Create your views here.
+def restaurants(request):
+    hotel=hotels.objects.all()
+    return render(request,'Restaurants.html',{'hotel':hotel})
