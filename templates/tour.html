@@ -64,7 +64,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- <div class="header_social d-flex flex-row align-items-center justify-content-start">
+		 <div class="header_social d-flex flex-row align-items-center justify-content-start">
 			<ul class="d-flex flex-row align-items-start justify-content-start">
 				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
 				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -73,7 +73,7 @@
 				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
 				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
 			</ul>
-		</div> -->
+		</div> 
 	</header>
 
 	<!-- Menu -->
@@ -92,7 +92,7 @@
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
 		</div>
-		<!-- <div class="menu_social">
+		 <div class="menu_social">
 			<div class="menu_phone ml-auto">Call us: 00-56 445 678 33</div>
 			<ul class="d-flex flex-row align-items-start justify-content-start">
 				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
@@ -102,13 +102,13 @@
 				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
 				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
 			</ul>
-		</div> -->
+		</div> 
 	</div>
 	
 	<!-- Home -->
 
 	<div class="home">
-		<div class="background_image" style="background-image:url({% static 'images/destinations.jpg' %})"></div>
+		<div class="background_image" style="background-image:url({% static 'images/tour.webp' %})"></div>
 	</div>
 
 	
@@ -165,8 +165,8 @@
 							</div>
 							<div class="destination_content">
 								<div class="destination_title"><a href="#">{{tour.name}}</a></div>
-								<div class="destination_subtitle"><p>{{tour.desc}}</p></div>
-								<div class="destination_price">From ${{tour.price}}</div>
+								<div class="destination_subtitle" style="white-space: pre-wrap;"><p>{{tour.desc}}</p></div>
+								<div class="destination_price">From ₹{{tour.price}}</div>
 								<div class="destination_list">
 									<ul>
 										<li>5 Stars Hotel</li>
@@ -178,186 +178,7 @@
 							</div>
 						</div>
 						{% endfor %}
-						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="{% static 'images/destination_1.jpg' %}" alt="">
-								<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="#">Bali</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
-								<div class="destination_price">From $679</div>
-								<div class="destination_list">
-									<ul>
-										<li>5 Stars Hotel</li>
-										<li>All Inclusive</li>
-										<li>Flight tickets included</li>
-										<li>Guided visits</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="{% static 'images/destination_2.jpeg' %}" alt="">
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="#">Indonesia</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
-								<div class="destination_price">From $579</div>
-								<div class="destination_list">
-									<ul>
-										<li>5 Stars Hotel</li>
-										<li>All Inclusive</li>
-										<li>Flight tickets included</li>
-										<li>Guided visits</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="{% static 'images/destination_3.jpeg' %}" alt="">
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="#">San Francisco</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
-								<div class="destination_price">From $399</div>
-								<div class="destination_list">
-									<ul>
-										<li>5 Stars Hotel</li>
-										<li>All Inclusive</li>
-										<li>Flight tickets included</li>
-										<li>Guided visits</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="{% static 'images/destination_4.jpeg' %}" alt="">
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="#">Paris</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
-								<div class="destination_price">From $639</div>
-								<div class="destination_list">
-									<ul>
-										<li>5 Stars Hotel</li>
-										<li>All Inclusive</li>
-										<li>Flight tickets included</li>
-										<li>Guided visits</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="{% static 'images/destination_5.jpeg' %}" alt="">
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="#">Phi Phi Island</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
-								<div class="destination_price">From $929</div>
-								<div class="destination_list">
-									<ul>
-										<li>5 Stars Hotel</li>
-										<li>All Inclusive</li>
-										<li>Flight tickets included</li>
-										<li>Guided visits</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="{% static 'images/destination_6.webp' %}" alt="">
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="#">Mykonos</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
-								<div class="destination_price">From $719</div>
-								<div class="destination_list">
-									<ul>
-										<li>5 Stars Hotel</li>
-										<li>All Inclusive</li>
-										<li>Flight tickets included</li>
-										<li>Guided visits</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="{% static 'images/destination_7.jpg' %}" alt="">
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="#">Paris</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
-								<div class="destination_price">From $515</div>
-								<div class="destination_list">
-									<ul>
-										<li>5 Stars Hotel</li>
-										<li>All Inclusive</li>
-										<li>Flight tickets included</li>
-										<li>Guided visits</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="{% static 'images/destination_8.jpg' %}" alt="">
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="#">Phi Phi Island</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
-								<div class="destination_price">From $879</div>
-								<div class="destination_list">
-									<ul>
-										<li>5 Stars Hotel</li>
-										<li>All Inclusive</li>
-										<li>Flight tickets included</li>
-										<li>Guided visits</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<!-- Destination -->
-						<div class="destination item">
-							 <div class="destination_image">
-								<img src="{% static 'images/destination_9.jpg' %}" alt="">
-							</div> 
-							<div class="destination_content">
-								<div class="destination_title"><a href="#">Mykonos</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
-								<div class="destination_price">From $679</div>
-								<div class="destination_list">
-									<ul>
-										<li>5 Stars Hotel</li>
-										<li>All Inclusive</li>
-										<li>Flight tickets included</li>
-										<li>Guided visits</li>
-									</ul>
-								</div>
-							</div>
-						</div>
+						
 
 					</div>
 				</div>
@@ -373,7 +194,9 @@
 <!-- Footer -->
 
 <footer class="footer">
-	<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/footer_1.jpeg' %}" data-speed="0.8"></div>
+	<div class="parallax_background parallax-window" data-parallax="scroll"  data-speed="0.8">
+		<img src="{% static 'images/footer_home.jpg' %}">
+	</div>
 	<div class="container">
 		<div class="row">
 			<div class="col">
@@ -405,8 +228,8 @@
 							<div class="footer_contact_title">give us a call</div>
 							<div class="footer_contact_list">
 								<ul>
-									<li>Office Landline: +44 5567 32 664 567</li>
-									<li>Mobile: +44 5567 89 3322 332</li>
+									<li>Office Landline: 07575 278054</li>
+									<li>Mobile: +91 6260709095</li>
 								</ul>
 							</div>
 						</div>
@@ -419,7 +242,7 @@
 							<div class="footer_contact_title">come & drop by</div>
 							<div class="footer_contact_list">
 								<ul style="max-width:190px">
-									<li>4124 Barnes Street, Sanford, FL 32771</li>
+									<li>Student Activity Center, IIT Roorkee</li>
 								</ul>
 							</div>
 						</div>
@@ -432,8 +255,8 @@
 							<div class="footer_contact_title">send us a message</div>
 							<div class="footer_contact_list">
 								<ul>
-									<li>youremail@gmail.com</li>
-									<li>Office@yourbusinessname.com</li>
+									<li>touriGO_helpline@gmail.com</li>
+									<li>Office@touriGO.com</li>
 								</ul>
 							</div>
 						</div>
@@ -443,9 +266,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </div>
+	
 </footer>
 </div>
 

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>News</title>
+<title>Blog</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="touriGO template project">
@@ -33,9 +33,10 @@
 									<li><a href="\">Home</a></li>
 									<li><a href="\aboutUs">About us</a></li>
 									<li><a href="\services">Services</a></li>
-									<li class="active"><a href="news.html">News</a></li>
+									<li class="active"><a href="news.html">Blogs</a></li>
 									<li><a href="\contact">Contact</a></li>
 									{% if user.is_authenticated %}
+									<li><a href="add">Add Blogs</a></li>
 									<li><a href="\accounts/logout">Logout</a></li>
 								    {% endif %}
 								</ul>
@@ -102,7 +103,7 @@
 
 	<!-- Search -->
 
-	<div class="home_search">
+	<!-- <div class="home_search">
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -123,7 +124,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- News -->
 
@@ -136,67 +137,28 @@
 					<div class="news_container">
 						
 						<!-- News Post -->
+						{% for news in newss %}
 						<div class="news_post">
-							<div class="news_post_image"><img src="{% static 'images/news_4.jpg' %}" alt=""></div>
+							<div class="news_post_image"><img src="{{news.img.url}}" alt=""></div>
 							<div class="news_post_content">
 								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
 									<div>02</div>
 									<div>june</div>
 								</div>
-								<div class="news_post_title"><a href="#">Best tips to travel light</a></div>
+								<div class="news_post_title"><a href="#">{{news.name}}</a></div>
 								<div class="news_post_category">
 									<ul>
 										<li><a href="#">lifestyle & travel</a></li>
 									</ul>
 								</div>
-								<div class="news_post_text">
-									<p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet. Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet.</p>
+								<div class="news_post_text" style="white-space: pre-wrap;">
+									<p>{{news.desc}}</p>
 								</div>
 								<div class="news_post_link"><a href="#">Read More</a></div>
 							</div>
 						</div>
-
+						{% endfor %}
 						<!-- News Post -->
-						<div class="news_post">
-							<div class="news_post_image"><img src="{% static 'images/news_5.jpg' %}" alt=""></div>
-							<div class="news_post_content">
-								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
-									<div>02</div>
-									<div>june</div>
-								</div>
-								<div class="news_post_title"><a href="#">10 Amazing Destination for you this summer</a></div>
-								<div class="news_post_category">
-									<ul>
-										<li><a href="#">lifestyle & travel</a></li>
-									</ul>
-								</div>
-								<div class="news_post_text">
-									<p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet. Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet.</p>
-								</div>
-								<div class="news_post_link"><a href="#">Read More</a></div>
-							</div>
-						</div>
-
-						<!-- News Post -->
-						<div class="news_post">
-							<div class="news_post_image"><img src="{% static 'images/news_6.jpg' %}" alt=""></div>
-							<div class="news_post_content">
-								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
-									<div>02</div>
-									<div>june</div>
-								</div>
-								<div class="news_post_title"><a href="#">How to organize your perfect vacation</a></div>
-								<div class="news_post_category">
-									<ul>
-										<li><a href="#">lifestyle & travel</a></li>
-									</ul>
-								</div>
-								<div class="news_post_text">
-									<p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet. Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet.</p>
-								</div>
-								<div class="news_post_link"><a href="#">Read More</a></div>
-							</div>
-						</div>
 
 					</div>
 
@@ -303,7 +265,9 @@
 	<!-- Footer -->
 
 	<footer class="footer">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/footer_1.jpg' %}" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll"  data-speed="0.8">
+			<img src="{% static 'images/footer_home.jpg' %}">
+		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -335,8 +299,8 @@
 								<div class="footer_contact_title">give us a call</div>
 								<div class="footer_contact_list">
 									<ul>
-										<li>Office Landline: +44 5567 32 664 567</li>
-										<li>Mobile: +44 5567 89 3322 332</li>
+										<li>Office Landline: 07575 278054</li>
+										<li>Mobile: +91 6260709095</li>
 									</ul>
 								</div>
 							</div>
@@ -349,7 +313,7 @@
 								<div class="footer_contact_title">come & drop by</div>
 								<div class="footer_contact_list">
 									<ul style="max-width:190px">
-										<li>4124 Barnes Street, Sanford, FL 32771</li>
+										<li>Student Activity Center, IIT Roorkee</li>
 									</ul>
 								</div>
 							</div>
@@ -362,8 +326,8 @@
 								<div class="footer_contact_title">send us a message</div>
 								<div class="footer_contact_list">
 									<ul>
-										<li>youremail@gmail.com</li>
-										<li>Office@yourbusinessname.com</li>
+										<li>touriGO_helpline@gmail.com</li>
+										<li>Office@touriGO.com</li>
 									</ul>
 								</div>
 							</div>
@@ -373,9 +337,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </div>
+		
 	</footer>
 </div>
 

@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'news.apps.NewsConfig',
     'restaurant.apps.RestaurantConfig',
     'travel.apps.TravelConfig',
     'tour.apps.TourConfig',

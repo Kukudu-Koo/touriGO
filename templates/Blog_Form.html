@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Blog Form</title>
+    <!-- <link rel="stylesheet" type="text/css" href="provider_Form.css"> -->
+    <style>
+        body {
+            background-image: url("{% static 'images/home_slider.jpg' %}");
+            background-size: cover;
+        }
+
+        header .main-title {
+            margin-top: 50px;
+            font-size: 50px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+        }
+
+        header .message {
+            margin-left: 150px;
+            font-size: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+        }
+
+        .super-container {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+        }
+
+        .container {
+            margin-top: 50px;
+            max-width: 700px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 25px 30px;
+            border-radius: 5px;
+        }
+
+        .container form .service-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        form .service-details .input-box {
+            margin: 20px 0 12px 0;
+            width: 40%;
+        }
+
+        .input-box .details {
+            font-size: 23px;
+            display: block;
+            font-weight: 550;
+            margin-bottom: 5px;
+        }
+
+        .xyz input {
+            height: 30px;
+            max-width: 95%;
+            min-width: 95%;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid rgb(55, 53, 53);
+            padding-left: 15px;
+            font-size: 16px;
+            border-bottom-width: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .xyz input:hover {
+            border-color: blue;
+        }
+
+        .xyz input:focus {
+            border-color: blue;
+        }
+
+        textarea {
+
+            width: 98%;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid rgb(55, 53, 53);
+            padding-left: 15px;
+            font-size: 16px;
+            border-bottom-width: 3px;
+            transition: all 0.3s ease;
+        }
+
+        textarea:hover {
+            border-color: blue;
+        }
+
+        textarea:focus {
+            border-color: blue;
+        }
+
+        .button input {
+            align-items: center;
+            margin-top: 20px;
+            height: 100%;
+            width: 50%;
+            outline: none;
+            color: #fff;
+            border: none;
+            font-size: 20px;
+            font-weight: 800;
+            border-radius: 5px;
+            letter-spacing: 2px;
+            background-color: orange;
+        }
+
+        .button input:hover {
+            background-color: rgb(255, 157, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="super-container">
+        <div class="container">
+            <header>
+                <span class="main-title">touriGO</span><br>
+                <!-- <span class="message">Get Started...</span> -->
+            </header>
+            <form action="add" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="service-details">
+                    <div class="input-box xyz">
+                        <span class="details">Blog Title</span>
+                        <input type="text" name="Name" placeholder="Enter Blog Title" required>
+                    </div>
+                    <div class="input-box ">
+                        <span class="details">Upload an image</span>
+                        <input type="file" name="img">
+                        <!-- <input type="file" name="img" accept=".jpg, .jpeg, .png"  ><br><br> -->
+                    </div>
+                    
+
+                </div>
+                <div class="other-details">
+                    <div class="input-box">
+                        <span class="details">Enter Blog</span>
+                        <textarea rows="10" cols="80" type="text" name="desc" size="1000"
+                            placeholder="Enter Blog" required></textarea>
+                            <!-- <input type="submit" name="submit" value="submit" onclick="divide()" /> -->
+                    </div>
+                    
+                </div>
+                <div class="button">
+                    <input type="submit" value="Submit" >
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
