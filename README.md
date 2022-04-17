@@ -14,8 +14,7 @@ Make sure you have installed *visual studio c++*, *python3*, *pip package instal
 ### Installation
 
 * Clone the repo
-   sh
-   git clone {repository link}
+```git clone {repository link}```
    
 * Open the migrations in home folder of the project and delete all the migration files which are numbered.
 * Install postgresql and Pg-admin in your system.
