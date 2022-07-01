@@ -81,8 +81,8 @@ Make sure you have installed *visual studio c++*, *python3*, *pip package instal
 
 ## Contributours Details
    * [Ujjwal Kumar Dubey](https://github.com/Kukudu-Koo)
-   * Prabhav Rohilla
+   * [Prabhav Rohilla](https://github.com/PrabhavRohilla)
    * [Arpeit Chourasiya](https://github.com/Arpeit08)
    * [Devesh Kumar](https://github.com/kumar-devesh)
    * [Raunak Kumar](https://github.com/Raunak6402)
-   * Aleena M R
+   * [Aleena M R](https://github.com/Aleena712)
