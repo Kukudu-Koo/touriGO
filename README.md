@@ -79,9 +79,9 @@ Make sure you have installed *visual studio c++*, *python3*, *pip package instal
 ## Sequence Diagrams
 ![image](https://user-images.githubusercontent.com/103559940/163727564-3991a6c3-4722-4a1a-bcd2-f4ebaae03d4e.png)
 
-##Contributours Details
-   *Ujjwal Kumar Dubey
-   *Arpeit Chourasiya
-   *Devesh Kumar
-   *Raunak Kumar
-   *Aleena M R
+## Contributours Details
+   * Ujjwal Kumar Dubey
+   * Arpeit Chourasiya
+   * Devesh Kumar
+   * Raunak Kumar
+   * Aleena M R
